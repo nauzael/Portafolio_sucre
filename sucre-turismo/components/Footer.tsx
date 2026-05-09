@@ -3,9 +3,6 @@
 import { motion } from "framer-motion";
 import { 
   Heart,
-  Mail, 
-  Phone, 
-  MapPin,
   Hotel,
   Tent,
   Utensils,

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Hotel, Phone, Mail, Globe, Star, Bed } from "lucide-react";
+import { Hotel, Phone, Mail, Globe, Star } from "lucide-react";
 
 interface Hotel {
   name: string;
