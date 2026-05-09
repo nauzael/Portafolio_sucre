@@ -18,12 +18,14 @@ jobs:
         with:
           node-version: '20.x'
       
+      - name: Install dependencies
+        working-directory: sucre-turismo
+        run: npm install
+      
       - name: Check for outdated packages
         id: check
-        run: |
-          cd sucre-turismo
-          npm outdated > /tmp/outdated.txt || true
-          cat /tmp/outdated.txt
+        working-directory: sucre-turismo
+        run: npm outdated > /tmp/outdated.txt || true
       
       - name: Create PR for dependency updates
         uses: actions/github-script@v7

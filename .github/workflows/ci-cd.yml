@@ -27,21 +27,18 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       
-      - name: Install dependencies (sucre-turismo)
-        run: |
-          cd sucre-turismo
-          npm install
+      - name: Install dependencies
+        working-directory: sucre-turismo
+        run: npm install
       
       - name: Lint code
-        run: |
-          cd sucre-turismo
-          npm run lint
+        working-directory: sucre-turismo
+        run: npm run lint
         continue-on-error: true
       
       - name: Build project
-        run: |
-          cd sucre-turismo
-          npm run build
+        working-directory: sucre-turismo
+        run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://descubresucre.com' }}
       
@@ -60,8 +57,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
       
       - name: Deploy to Vercel
         uses: vercel/action@v6

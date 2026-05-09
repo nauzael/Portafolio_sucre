@@ -27,14 +27,12 @@ jobs:
           node-version: '20.x'
       
       - name: Install dependencies
-        run: |
-          cd sucre-turismo
-          npm install
+        working-directory: sucre-turismo
+        run: npm install
       
       - name: Build project
-        run: |
-          cd sucre-turismo
-          npm run build
+        working-directory: sucre-turismo
+        run: npm run build
         env:
           NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://descubresucre.com' }}
       
