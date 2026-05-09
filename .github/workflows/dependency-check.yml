@@ -1,0 +1,46 @@
+name: Dependency Updates
+
+on:
+  schedule:
+    - cron: '0 2 * * MON'  # Every Monday at 2 AM UTC
+  workflow_dispatch:
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Check for outdated packages
+        id: check
+        run: |
+          cd sucre-turismo
+          npm outdated > /tmp/outdated.txt || true
+          cat /tmp/outdated.txt
+      
+      - name: Create PR for dependency updates
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const outdated = fs.readFileSync('/tmp/outdated.txt', 'utf8');
+            
+            if (outdated.trim()) {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `## 📦 Outdated Dependencies Found\n\n\`\`\`\n${outdated}\n\`\`\``
+              });
+            }
+        continue-on-error: true

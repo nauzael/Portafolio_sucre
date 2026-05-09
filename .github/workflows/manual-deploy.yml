@@ -1,0 +1,56 @@
+name: Manual Deploy to Vercel
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - preview
+
+jobs:
+  manual-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd sucre-turismo
+          npm ci
+      
+      - name: Build project
+        run: |
+          cd sucre-turismo
+          npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://descubresucre.com' }}
+      
+      - name: Deploy to Vercel
+        uses: vercel/action@v6
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./sucre-turismo
+          scope: ${{ secrets.VERCEL_ORG_ID }}
+      
+      - name: Create deployment notification
+        run: |
+          echo "✅ Deployment to ${{ github.event.inputs.environment }} completed successfully!"
+          echo "📍 Vercel Project: sucre-turismo"

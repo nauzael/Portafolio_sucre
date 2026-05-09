@@ -1,0 +1,21 @@
+# GitHub CODEOWNERS
+# Define quién es responsable de cada parte del proyecto
+
+# Propietario general del repositorio
+* @nauzael
+
+# Configuración y CI/CD
+/.github/ @nauzael
+/vercel.json @nauzael
+/next.config.ts @nauzael
+
+# Proyecto Next.js principal
+/sucre-turismo/app/ @nauzael
+/sucre-turismo/components/ @nauzael
+/sucre-turismo/data/ @nauzael
+/sucre-turismo/public/ @nauzael
+/sucre-turismo/package.json @nauzael
+
+# Documentación
+/docs/ @nauzael
+*.md @nauzael
