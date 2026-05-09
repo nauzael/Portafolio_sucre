@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'npm'
+          cache-dependency-path: 'sucre-turismo/package-lock.json'
       
       - name: Audit dependencies
         run: |
