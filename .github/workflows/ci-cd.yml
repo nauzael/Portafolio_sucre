@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies (sucre-turismo)
         run: |
           cd sucre-turismo
-          npm ci
+          npm install
       
       - name: Lint code
         run: |
