@@ -48,21 +48,21 @@ export default function CrciHero() {
               <img 
                 src="/logo-gob.png" 
                 alt="Logo GOB"
-                className="h-16 sm:h-20 md:h-24 lg:h-32 w-auto"
+                className="h-32 sm:h-28 md:h-32 lg:h-40 xl:h-44 w-auto"
               />
               <div className="space-y-0 sm:space-y-1 w-full text-center lg:text-left">
-                <h1 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-tight text-[#cbbeff]">
+                <h1 className="font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#cbbeff]">
                   Encuentro Nacional
                 </h1>
-                <h2 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#cbbeff]">
+                <h2 className="font-bold text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#cbbeff]">
                   de Comisiones Regionales
                 </h2>
-                <h3 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-tight text-[#e9c400]">
+                <h3 className="font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#e9c400]">
                   de Competitividad e Innovación
                 </h3>
               </div>
               
-              <div className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#36ffc4] pt-2 sm:pt-3 md:pt-4 lg:pt-4 leading-none">
+              <div className="font-bold text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#36ffc4] pt-2 sm:pt-3 md:pt-4 lg:pt-4 leading-none">
                 2026
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function CrciHero() {
 
           {/* Right Column: Visual Elements */}
           <motion.div
-            className="relative w-full h-64 sm:h-80 md:h-[28rem] lg:h-[32rem] xl:h-[40rem] order-2 lg:order-2"
+            className="relative w-full h-96 sm:h-96 md:h-[32rem] lg:h-[36rem] xl:h-[44rem] order-2 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
