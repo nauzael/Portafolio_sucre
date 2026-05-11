@@ -37,11 +37,8 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Sucre - Caribe Colombiano",
-        type: "image/jpeg",
       },
     ],
-    publishedTime: new Date().toISOString(),
-    modifiedTime: new Date().toISOString(),
   },
   twitter: {
     card: "summary_large_image",
