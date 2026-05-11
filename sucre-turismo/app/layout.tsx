@@ -29,21 +29,26 @@ export const metadata: Metadata = {
     description: "Vive la magia del Caribe colombiano. Hoteles, experiencias, gastronomía y cultura.",
     type: "website",
     locale: "es_CO",
-    url: "/",
+    url: "https://descubresucre.vercel.app/",
+    siteName: "Descubre Sucre",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Sucre - Caribe Colombiano",
+        type: "image/jpeg",
       },
     ],
+    publishedTime: new Date().toISOString(),
+    modifiedTime: new Date().toISOString(),
   },
   twitter: {
     card: "summary_large_image",
     title: "Descubre Sucre y su tesoro de belleza sin igual",
     description: "Vive la magia del Caribe colombiano",
     images: ["/twitter-image.jpg"],
+    creator: "@descubresucre",
   },
 };
 
