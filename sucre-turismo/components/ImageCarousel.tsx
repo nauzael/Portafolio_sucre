@@ -17,6 +17,8 @@ const CAROUSEL_IMAGES = [
   "/DSC_3861.jpg",
   "/DSC_3866.jpg",
   "/DSC_3941.jpg",
+  "/WhatsApp Image 2026-05-11 at 5.54.45 PM.jpeg",
+  "/WhatsApp Image 2026-05-11 at 5.54.45 PM (1).jpeg",
 ];
 
 const CAROUSEL_INTERVAL = 5000; // 5 segundos por imagen
