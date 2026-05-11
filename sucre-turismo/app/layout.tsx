@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://descubresucre.com"
   ),
-  title: "Descubre Sucre y el Golfo de Morrosquillo | Turismo Caribe Colombiano",
+  title: "Descubre Sucre y su tesoro de belleza sin igual",
   description:
     "Vive la magia del Caribe colombiano. Hoteles, experiencias, gastronomía y cultura en Sucre. ¡Planifica tu viaje ahora!",
   keywords:
     "Sucre, turismo, Caribe, Colombia, Golfo de Morrosquillo, playas, hoteles, ecoturismo, gastronomía, Coveñas, Sincelejo",
   authors: [{ name: "Turismo Sucre" }],
   openGraph: {
-    title: "Descubre Sucre y el Golfo de Morrosquillo",
+    title: "Descubre Sucre y su tesoro de belleza sin igual",
     description: "Vive la magia del Caribe colombiano. Hoteles, experiencias, gastronomía y cultura.",
     type: "website",
     locale: "es_CO",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Descubre Sucre y el Golfo de Morrosquillo",
+    title: "Descubre Sucre y su tesoro de belleza sin igual",
     description: "Vive la magia del Caribe colombiano",
     images: ["/twitter-image.jpg"],
   },

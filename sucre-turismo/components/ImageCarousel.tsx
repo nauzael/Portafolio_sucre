@@ -12,6 +12,11 @@ const CAROUSEL_IMAGES = [
   "/carousel-5.jpg",
   "/carousel-6.jpg",
   "/carousel-7.jpg",
+  "/DSC_2069.jpg",
+  "/DSC_2515.jpg",
+  "/DSC_3861.jpg",
+  "/DSC_3866.jpg",
+  "/DSC_3941.jpg",
 ];
 
 const CAROUSEL_INTERVAL = 5000; // 5 segundos por imagen
