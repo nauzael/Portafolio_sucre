@@ -197,7 +197,7 @@ export const siteData = {
         instagram: "https://www.instagram.com/momaexcursiones/",
       },
       brochure: "/brochures/moma-excursiones-brochure.pdf",
-      image: "/moma.jpg",
+      image: "/Moma.jpg",
       experiences: [
         'Senderismo en Reserva Forestal Serranía de Coraza (Los Caminos del Agua)',
         'Turismo de aventura en Parque Roca Madre (Toluviejo)',

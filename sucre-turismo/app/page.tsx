@@ -3,7 +3,6 @@ import CrciHero from "../components/CrciHero";
 import Hotels from "../components/Hotels";
 import Experiences from "../components/Experiences";
 import BrandLogos from "../components/BrandLogos";
-import Gastronomy from "../components/Gastronomy";
 import FestivalBanner from "../components/FestivalBanner";
 import Footer from "../components/Footer";
 import { siteData } from "@/data/content";
@@ -29,7 +28,6 @@ export default function Home() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Encuentra opciones de hospedaje y aprovecha beneficios exclusivos.
-              El 15% de descuento solo aplica para participantes del Encuentro de Comisiones Regionales de Competitividad e Innovación.
             </p>
           </div>
 
@@ -43,11 +41,6 @@ export default function Home() {
 
       {/* Aliados Section */}
       <BrandLogos logos={siteData.logos} />
-
-      {/* Gastronomía Section */}
-      <section id="gastronomia" className="py-20">
-        <Gastronomy mar={siteData.gastronomy.mar} ancestral={siteData.gastronomy.ancestral} />
-      </section>
 
       {/* Festival Banner */}
       <FestivalBanner

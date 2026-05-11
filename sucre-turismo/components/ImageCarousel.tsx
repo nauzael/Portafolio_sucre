@@ -90,7 +90,7 @@ export default function ImageCarousel() {
           );
           setIsAutoPlay(false);
         }}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer group"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer group pointer-events-auto"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onMouseLeave={() => setIsAutoPlay(true)}
@@ -116,7 +116,7 @@ export default function ImageCarousel() {
           setCurrentIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
           setIsAutoPlay(false);
         }}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer group"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer group pointer-events-auto"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onMouseLeave={() => setIsAutoPlay(true)}

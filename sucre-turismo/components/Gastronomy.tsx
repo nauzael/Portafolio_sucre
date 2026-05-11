@@ -93,7 +93,7 @@ export default function Gastronomy({ mar, ancestral }: GastronomyProps) {
             </div>
 
             <p className="text-gray-600 mb-4">
-              Sumérgete en los Montes de María con <span className="font-semibold text-gray-900">{ancestral.operator}</span>
+              Sumérgete en los Montes de María
             </p>
 
             <div className="space-y-4">
