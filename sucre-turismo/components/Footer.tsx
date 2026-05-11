@@ -103,6 +103,39 @@ export default function Footer({ text }: FooterProps) {
           </a>
         </motion.div>
 
+        {/* QR de la página desplegada en Vercel */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-8"
+        >
+          <div className="bg-gray-800 p-6 rounded-3xl text-center max-w-sm">
+            <p className="text-sm text-gray-400 mb-4">
+              Escanea el QR para abrir el sitio desplegado en Vercel.
+            </p>
+            <a
+              href={process.env.NEXT_PUBLIC_SITE_URL ?? "https://tu-dominio-aqui.com"}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block rounded-3xl overflow-hidden border border-gray-700"
+            >
+              <img
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=${encodeURIComponent(
+                  process.env.NEXT_PUBLIC_SITE_URL ?? "https://tu-dominio-aqui.com"
+                )}`}
+                alt="Código QR para abrir la página en Vercel"
+                width={280}
+                height={280}
+                className="block"
+              />
+            </a>
+            <p className="text-xs text-gray-500 mt-3 break-words">
+              {process.env.NEXT_PUBLIC_SITE_URL ?? "https://tu-dominio-aqui.com"}
+            </p>
+          </div>
+        </motion.div>
+
         {/* Divider */}
         <div className="border-t border-gray-800 my-8" />
 

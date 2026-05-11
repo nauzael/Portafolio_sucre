@@ -125,6 +125,7 @@ export const siteData = {
       phone: "+57 300 123 6173",
       email: "mapatoursporcolombia@gmail.com",
       website: "",
+      brochure: "/brochures/mapa-tours-brochure.pdf",
       experiences: [
         '"Conñeque" - Bicitour en Morroa con taller de ñeque',
         'Bicitour histórico en Corozal y Betulia',
@@ -142,6 +143,7 @@ export const siteData = {
       phone: ["304 666 3693", "320 548 8336"],
       email: "ecoturismoindigenaonnecoloso@gmail.com",
       website: "",
+      brochure: "/brochures/onne-coloso-brochure.pdf",
       experiences: [
         '4 rutas inmersivas con arquitectura republicana',
         'Senderismo por el bosque seco tropical milenario',
@@ -160,6 +162,7 @@ export const siteData = {
       phone: "+57 301 656 6932",
       email: "",
       website: "www.momaexcursiones.co",
+      brochure: "/brochures/moma-excursiones-brochure.pdf",
       experiences: [
         'Senderismo en Reserva Forestal Serranía de Coraza (Los Caminos del Agua)',
         'Turismo de aventura en Parque Roca Madre (Toluviejo)',

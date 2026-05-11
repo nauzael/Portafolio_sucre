@@ -23,6 +23,7 @@ interface Experience {
   email: string;
   website: string;
   experiences: string[];
+  brochure?: string;
 }
 
 interface ExperiencesProps {
@@ -138,6 +139,18 @@ export default function Experiences({ operators }: ExperiencesProps) {
                   </div>
                 )}
               </div>
+
+              {operator.brochure && (
+                <div className="mt-6">
+                  <a
+                    href={operator.brochure}
+                    download
+                    className="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-cyan-600 text-white font-semibold hover:bg-cyan-500 transition"
+                  >
+                    Descargar brochure
+                  </a>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
