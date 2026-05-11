@@ -21,24 +21,44 @@ const CAROUSEL_IMAGES = [
 
 const CAROUSEL_INTERVAL = 5000; // 5 segundos por imagen
 
+// Función para mezclar array usando Fisher-Yates
+const shuffleArray = (array: string[]) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export default function ImageCarousel() {
+  const [shuffledImages, setShuffledImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
+  // Inicializar con imágenes mezcladas
   useEffect(() => {
-    if (!isAutoPlay) return;
+    setShuffledImages(shuffleArray(CAROUSEL_IMAGES));
+  }, []);
+
+  useEffect(() => {
+    if (!isAutoPlay || shuffledImages.length === 0) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
+      setCurrentIndex((prev) => (prev + 1) % shuffledImages.length);
     }, CAROUSEL_INTERVAL);
 
     return () => clearInterval(interval);
-  }, [isAutoPlay]);
+  }, [isAutoPlay, shuffledImages.length]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlay(false);
   };
+
+  if (shuffledImages.length === 0) {
+    return <div className="absolute inset-0 bg-black z-0" />;
+  }
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden bg-black z-0">
@@ -52,7 +72,7 @@ export default function ImageCarousel() {
           className="absolute inset-0"
         >
           <Image
-            src={CAROUSEL_IMAGES[currentIndex]}
+            src={shuffledImages[currentIndex]}
             alt={`Carousel slide ${currentIndex + 1}`}
             fill
             className="object-cover"
@@ -69,7 +89,7 @@ export default function ImageCarousel() {
 
       {/* Indicadores de slides */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
-        {CAROUSEL_IMAGES.map((_, index) => (
+        {shuffledImages.map((_, index) => (
           <motion.button
             key={index}
             onClick={() => goToSlide(index)}
@@ -91,7 +111,7 @@ export default function ImageCarousel() {
       <motion.button
         onClick={() => {
           setCurrentIndex(
-            (prev) => (prev - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length
+            (prev) => (prev - 1 + shuffledImages.length) % shuffledImages.length
           );
           setIsAutoPlay(false);
         }}
@@ -118,7 +138,7 @@ export default function ImageCarousel() {
 
       <motion.button
         onClick={() => {
-          setCurrentIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
+          setCurrentIndex((prev) => (prev + 1) % shuffledImages.length);
           setIsAutoPlay(false);
         }}
         className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-white/40 flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer group pointer-events-auto"
