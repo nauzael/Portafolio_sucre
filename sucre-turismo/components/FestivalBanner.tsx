@@ -88,14 +88,14 @@ export default function FestivalBanner({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="mb-10 max-w-2xl mx-auto"
+            className="mb-10 max-w-4xl mx-auto"
           >
-            <div className="relative aspect-[2/3] md:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
+            <div className="relative aspect-[3/4] md:aspect-auto md:h-[700px] rounded-2xl overflow-hidden">
               <Image
                 src="/pito-atravesao-poster.jpeg"
                 alt="Festival Nacional de Pito Atravesao - Pablo Domínguez"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>

@@ -77,7 +77,7 @@ export const siteData = {
   // Hoteles en Sincelejo
   hotelsSincelejo: [
     {
-      name: "Hotel Malibu",
+      name: "Hotel Malibú",
       stars: 0,
       discount: "",
       contact: "",
@@ -199,9 +199,10 @@ export const siteData = {
       image: "/Moma.jpg",
       experiences: [
         'Senderismo en Reserva Forestal Serranía de Coraza (Los Caminos del Agua)',
-        'Turismo de aventura en Parque Roca Madre (Toluviejo)',
+        'Turismo de aventura en Parque Rocamadre (Toluviejo)',
         'Puentes tibetanos, cuevas y canopy',
         'Días de sol y playa con esnórquel en Rincón del Mar',
+        'Chalán: Tradición y cultura montemarianas, construyendo paz',
       ],
     },
     {
@@ -249,7 +250,7 @@ export const siteData = {
     subtitle: 'Tradición que nos une',
     dates: '26-28 de junio de 2026',
     location: 'Municipio de Morroa',
-    version: '37ª Versión',
+    version: '37 Versión',
     honor: 'En honor a Pablo Domínguez',
     description: 'Música y raíces de la región',
   },
