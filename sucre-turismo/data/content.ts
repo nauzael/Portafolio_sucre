@@ -9,6 +9,17 @@ export const siteData = {
     cta: "¡Planifica tu viaje ahora!",
   },
 
+  logos: [
+    {
+      name: "Logo Naturaleza",
+      image: "/logo naturaleza.png",
+    },
+    {
+      name: "Logo Náutico",
+      image: "/logo nautico.png",
+    },
+  ],
+
   // Hoteles en Coveñas
   hotelsCovenas: [
     {
@@ -19,6 +30,7 @@ export const siteData = {
       phone: ["3105935762", "3206345598"],
       email: "reservas@hotelpoblado.com",
       website: "",
+      image: "/hotels/hotel-poblado.jpg",
     },
     {
       name: "Hotel Portoalegre",
@@ -28,6 +40,7 @@ export const siteData = {
       phone: ["300 2980993"],
       email: "",
       website: "hotelportoalegre.com.co",
+      image: "/hotels/hotel-portoalegre.jpg",
     },
     {
       name: "Hotel Los Hermanos",
@@ -37,6 +50,7 @@ export const siteData = {
       phone: ["3041117804", "3134725797"],
       email: "info@hotelloshermanos.com",
       website: "",
+      image: "/hotels/hotel-los-hermanos.jpg",
     },
     {
       name: "Hotel Vaia",
@@ -46,6 +60,7 @@ export const siteData = {
       phone: ["3001936990"],
       email: "reservas@vaiahoteles.com",
       website: "",
+      image: "/hotels/hotel-vaia.jpg",
     },
     {
       name: "Cabañitas del Mar",
@@ -55,6 +70,7 @@ export const siteData = {
       phone: ["313 3502889"],
       email: "reservas@cabanitasdelmar.co",
       website: "",
+      image: "/hotels/cabanitas-del-mar.jpg",
     },
   ],
 
@@ -68,6 +84,7 @@ export const siteData = {
       phone: ["3145933714"],
       email: "reservas@hotelmalibu.co",
       website: "www.hotelmalibu.co",
+      image: "/hotels/hotel-malibu.jpg",
     },
     {
       name: "Hotel Arawak Plaza",
@@ -77,6 +94,7 @@ export const siteData = {
       phone: ["605 276 5555", "318 330 9737"],
       email: "arawakplaza@outlook.com",
       website: "www.arawakplaza.com",
+      image: "/hotels/hotel-arawak-plaza.jpg",
     },
     {
       name: "Hotel Stanza Sincelejo",
@@ -86,6 +104,7 @@ export const siteData = {
       phone: ["301 2673527"],
       email: "",
       website: "stanza-hotel-sincelejo.genesishotel.co",
+      image: "/hotels/hotel-stanza-sincelejo.jpg",
     },
     {
       name: "Hotel Panorama",
@@ -95,6 +114,7 @@ export const siteData = {
       phone: ["+57 5 282 1884", "320 531 8154"],
       email: "reservas@hotelpanoramasincelejo.com",
       website: "",
+      image: "/hotels/hotel-panorama.png",
     },
     {
       name: "Hotel Ancor",
@@ -104,6 +124,7 @@ export const siteData = {
       phone: ["318 2099588"],
       email: "",
       website: "hotel-ancor.genesishotel.co",
+      image: "/hotels/hotel-ancor.webp",
     },
     {
       name: "Hotel Iraka Zenu",
@@ -113,6 +134,7 @@ export const siteData = {
       phone: ["321 6667404"],
       email: "",
       website: "",
+      image: "/hotels/hotel-iraka-zenu.jpg",
     },
   ],
 
@@ -125,7 +147,12 @@ export const siteData = {
       phone: "+57 300 123 6173",
       email: "mapatoursporcolombia@gmail.com",
       website: "",
+      socials: {
+        instagram: "https://www.instagram.com/mapatoursporcolombia/",
+        facebook: "https://www.facebook.com/mapatoursporcolombia/",
+      },
       brochure: "/brochures/mapa-tours-brochure.pdf",
+      image: "/mapa.jpg",
       experiences: [
         '"Conñeque" - Bicitour en Morroa con taller de ñeque',
         'Bicitour histórico en Corozal y Betulia',
@@ -143,7 +170,11 @@ export const siteData = {
       phone: ["304 666 3693", "320 548 8336"],
       email: "ecoturismoindigenaonnecoloso@gmail.com",
       website: "",
+      socials: {
+        instagram: "https://www.instagram.com/ecoturismoindigenaonnecoloso/",
+      },
       brochure: "/brochures/onne-coloso-brochure.pdf",
+      image: "/onne.jpg",
       experiences: [
         '4 rutas inmersivas con arquitectura republicana',
         'Senderismo por el bosque seco tropical milenario',
@@ -162,12 +193,35 @@ export const siteData = {
       phone: "+57 301 656 6932",
       email: "",
       website: "www.momaexcursiones.co",
+      socials: {
+        instagram: "https://www.instagram.com/momaexcursiones/",
+      },
       brochure: "/brochures/moma-excursiones-brochure.pdf",
+      image: "/moma.jpg",
       experiences: [
         'Senderismo en Reserva Forestal Serranía de Coraza (Los Caminos del Agua)',
         'Turismo de aventura en Parque Roca Madre (Toluviejo)',
         'Puentes tibetanos, cuevas y canopy',
         'Días de sol y playa con esnórquel en Rincón del Mar',
+      ],
+    },
+    {
+      name: "SUNSET TRAVEL COLOMBIA",
+      tagline: "Agencia operadora con experiencia en Sucre",
+      description: "Operadora con 7 años de experiencia y más de 5000 pasajeros movilizados. Especialistas en turismo de naturaleza, cultura y playa en Sucre.",
+      phone: "+57 300 643 9532",
+      email: "sunsettravelcolombia@gmail.com",
+      website: "",
+      socials: {
+        instagram: "https://www.instagram.com/sunsettravelcolombia/",
+      },
+      brochure: "/brochures/sunset-travel-colombia-brochure.pdf",
+      image: "/sunset.jpg",
+      experiences: [
+        'Tours de naturaleza en Montes de María y el Golfo de Morrosquillo',
+        'Experiencias culturales y rutas ancestrales Zenú',
+        'Aventuras en manglares, cascadas y avistamiento de aves',
+        'Programas con alojamiento, transporte y gastronomía local',
       ],
     },
   ],

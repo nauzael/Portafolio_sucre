@@ -1,6 +1,8 @@
 import Hero from "../components/Hero";
+import CrciHero from "../components/CrciHero";
 import Hotels from "../components/Hotels";
 import Experiences from "../components/Experiences";
+import BrandLogos from "../components/BrandLogos";
 import Gastronomy from "../components/Gastronomy";
 import FestivalBanner from "../components/FestivalBanner";
 import Footer from "../components/Footer";
@@ -9,11 +11,13 @@ import { siteData } from "@/data/content";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
+      {/* CRCI 2026 Hero Section */}
+      <CrciHero />
+
+      {/* Original Hero Section */}
       <Hero 
         title={siteData.hero.title}
         subtitle={siteData.hero.subtitle}
-        cta={siteData.hero.cta}
       />
 
       {/* Hoteles Section */}
@@ -21,11 +25,11 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Tu descanso ideal: Hoteles en Sincelejo y Coveñas
+              Hoteles en Sincelejo y Coveñas
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Contamos con las mejores opciones de alojamiento para garantizar tu comodidad, 
-              ya sea frente al mar o en el corazón del departamento.
+              Encuentra opciones de hospedaje y aprovecha beneficios exclusivos.
+              El 15% de descuento solo aplica para participantes del Encuentro de Comisiones Regionales de Competitividad e Innovación.
             </p>
           </div>
 
@@ -36,6 +40,9 @@ export default function Home() {
 
       {/* Experiencias Section */}
       <Experiences operators={siteData.operators} />
+
+      {/* Aliados Section */}
+      <BrandLogos logos={siteData.logos} />
 
       {/* Gastronomía Section */}
       <section id="gastronomia" className="py-20">

@@ -8,10 +8,9 @@ import ImageCarousel from "./ImageCarousel";
 interface HeroProps {
   title: string;
   subtitle: string;
-  cta: string;
 }
 
-export default function Hero({ title, subtitle, cta }: HeroProps) {
+export default function Hero({ title, subtitle }: HeroProps) {
   const scrollToContent = () => {
     const contentSection = document.getElementById('content');
     contentSection?.scrollIntoView({ behavior: 'smooth' });
@@ -63,21 +62,6 @@ export default function Hero({ title, subtitle, cta }: HeroProps) {
         >
           {subtitle}
         </motion.p>
-
-        {/* Botón CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <button
-            onClick={scrollToContent}
-            className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold rounded-full text-lg shadow-2xl hover:shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-caribe"
-          >
-            {cta}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-          </button>
-        </motion.div>
 
         {/* Indicador de scroll */}
         <motion.div

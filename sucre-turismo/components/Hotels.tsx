@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Hotel, Phone, Mail, Globe, Star } from "lucide-react";
 
@@ -11,6 +12,7 @@ interface Hotel {
   phone: string[];
   email: string;
   website: string;
+  image?: string;
 }
 
 interface HotelsProps {
@@ -34,8 +36,20 @@ export default function Hotels({ hotels, location }: HotelsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover-lift border border-gray-100"
+            className={`bg-white rounded-3xl p-6 shadow-md transition-all duration-300 hover:shadow-xl hover-lift ${hotel.discount ? 'border-2 border-cyan-300 ring-1 ring-cyan-100' : 'border border-gray-100'}`}
           >
+            {hotel.image && (
+              <div className="mb-4 overflow-hidden rounded-2xl bg-gray-100">
+                <Image
+                  src={hotel.image}
+                  alt={hotel.name}
+                  width={640}
+                  height={360}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+            )}
+
             {/* Nombre y estrellas */}
             <div className="mb-4">
               <h4 className="text-xl font-bold text-gray-900 mb-2">{hotel.name}</h4>
@@ -54,9 +68,12 @@ export default function Hotels({ hotels, location }: HotelsProps) {
             {/* Badge de descuento */}
             {hotel.discount && (
               <div className="mb-4">
-                <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-sm font-bold rounded-full">
+                <span className="inline-block px-4 py-3 bg-gradient-to-r from-orange-500 via-amber-500 to-pink-500 text-white text-base font-bold rounded-full shadow-lg">
                   {hotel.discount}
                 </span>
+                <p className="mt-2 text-sm text-cyan-700 font-semibold">
+                  Descuento exclusivo para participantes del Encuentro de Comisiones Regionales de Competitividad e Innovación.
+                </p>
               </div>
             )}
 
