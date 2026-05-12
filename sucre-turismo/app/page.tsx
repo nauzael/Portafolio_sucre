@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Hero from "../components/Hero";
 import CrciHero from "../components/CrciHero";
 import Hotels from "../components/Hotels";
@@ -8,16 +11,21 @@ import Footer from "../components/Footer";
 import { siteData } from "@/data/content";
 
 export default function Home() {
+  // Forzar scroll al top cuando carga la página
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
+
   return (
     <main className="min-h-screen">
+      {/* CRCI 2026 Hero Section */}
+      <CrciHero />
+
       {/* Original Hero Section */}
       <Hero 
         title={siteData.hero.title}
         subtitle={siteData.hero.subtitle}
       />
-
-      {/* CRCI 2026 Hero Section */}
-      <CrciHero />
 
       {/* Hoteles Section */}
       <section id="hoteles" className="py-20 bg-gradient-to-br from-cyan-50 via-emerald-50 to-teal-50">
