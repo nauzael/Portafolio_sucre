@@ -10,14 +10,14 @@ import { siteData } from "@/data/content";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* CRCI 2026 Hero Section */}
-      <CrciHero />
-
       {/* Original Hero Section */}
       <Hero 
         title={siteData.hero.title}
         subtitle={siteData.hero.subtitle}
       />
+
+      {/* CRCI 2026 Hero Section */}
+      <CrciHero />
 
       {/* Hoteles Section */}
       <section id="hoteles" className="py-20 bg-gradient-to-br from-cyan-50 via-emerald-50 to-teal-50">
