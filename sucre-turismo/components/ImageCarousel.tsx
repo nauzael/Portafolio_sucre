@@ -5,23 +5,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const CAROUSEL_IMAGES = [
-  "/carousel-1.jpg",
-  "/carousel-2.jpg",
-  "/carousel-3.jpg",
-  "/carousel-4.jpg",
-  "/carousel-5.jpg",
-  "/carousel-6.jpg",
-  "/carousel-7.jpg",
-  "/DSC_2069.jpg",
-  "/DSC_2515.jpg",
-  "/DSC_3861.jpg",
-  "/DSC_3866.jpg",
-  "/DSC_3941.jpg",
-  "/WhatsApp Image 2026-05-11 at 5.54.45 PM.jpeg",
-  "/WhatsApp Image 2026-05-11 at 5.54.45 PM (1).jpeg",
-  "/experience-paddleboard.jpeg",
-  "/experience-waterfall.jpeg",
-  "/experience-natural-pool.jpeg",
+  // PLAYA Y MAR
+  "/01-whatsapp-beach-1.jpeg",
+  "/02-whatsapp-beach-2.jpeg",
+  
+  // CIÉNAGAS Y MANGLARES
+  "/03-experience-paddleboard.jpeg",
+  "/04-experience-waterfall.jpeg",
+  
+  // NATURALEZA
+  "/05-carousel-1.jpg",
+  "/06-carousel-2.jpg",
+  "/07-carousel-3.jpg",
+  "/08-carousel-4.jpg",
+  "/09-carousel-6.jpg",
+  "/10-carousel-7.jpg",
+  "/11-DSC_2515.jpg",
+  "/12-DSC_3861.jpg",
+  "/13-DSC_3866.jpg",
+  "/14-DSC_3941.jpg",
+  "/15-experience-natural-pool.jpeg",
 ];
 
 const CAROUSEL_INTERVAL = 5000; // 5 segundos por imagen
