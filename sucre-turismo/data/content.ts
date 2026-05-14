@@ -244,6 +244,27 @@ export const siteData = {
         'Navegación Avanzada: Clases mensuales con exploración, mejora de habilidades y ejercicios de equilibrio',
       ],
     },
+    {
+      name: "CIELOTOUR",
+      tagline: "Las historias ancestrales no se cuentan… se viven",
+      description: "Operador turístico especializado en experiencias culturales y ancestrales del territorio Zenú, ofreciendo vivencias inmersivas en la región de Sucre.",
+      phone: "+57 301 646 8069",
+      email: "reservas@cielotour.com",
+      website: "www.cielotour.com",
+      socials: {
+        instagram: "https://www.instagram.com/cielotour.operador/",
+      },
+      brochure: "/brochures/cielotour-brochure.pdf",
+      image: "/cielotour.jpg",
+      experiences: [
+        'San Antonio de Palmito - Experiencias de historias ancestrales',
+        'Casa Museo Toluá - Objetos arqueológicos y etnográficos',
+        'Ceiba - Visita a la Tierra',
+        'Cabildo Algodoncillo - Elaboración artesanal de caña flecha',
+        'Bosques Comestibles - Conocimiento ancestral de flora local',
+        'Gastronomía Local - Maíz chicha y sabores tradicionales',
+      ],
+    },
   ],
 
   // Gastronomía
