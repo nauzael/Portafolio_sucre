@@ -1,0 +1,9 @@
+<div class="encuentro-banner">
+  <div class="titulo">
+    Encuentro Nacional<br>
+    de Comisiones Regionales de<br>
+    Competitividad e Innovación
+  </div>
+
+  <div class="anio">2026</div>
+</div>

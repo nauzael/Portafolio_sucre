@@ -1,0 +1,26 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap" rel="stylesheet">
+
+<style>
+  .encuentro-banner {
+    background: #000000;
+    padding: 70px 90px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 900;
+    line-height: 1.05;
+  }
+
+  .encuentro-banner .titulo {
+    color: #A052F0; /* morado */
+    font-size: 120px;
+    margin: 0;
+  }
+
+  .encuentro-banner .anio {
+    color: #1FF5C0; /* verde agua */
+    font-size: 320px;
+    margin: 40px 0 0 0;
+    line-height: 0.9;
+  }
+</style>

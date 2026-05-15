@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import Hero from "../components/Hero";
-import CrciHero from "../components/CrciHero";
 import Hotels from "../components/Hotels";
 import Experiences from "../components/Experiences";
 import BrandLogos from "../components/BrandLogos";
@@ -18,10 +17,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* CRCI 2026 Hero Section */}
-      <CrciHero />
-
-      {/* Original Hero Section */}
+      {/* Hero Section */}
       <Hero 
         title={siteData.hero.title}
         subtitle={siteData.hero.subtitle}
